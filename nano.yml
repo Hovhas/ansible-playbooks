@@ -1,0 +1,9 @@
+- name: install latest nano on all hosts
+  hosts: "*"
+  tasks:
+    - name: install nano
+      apt:
+        name: nano
+        state: present
+        update_cache: true
+      become: true

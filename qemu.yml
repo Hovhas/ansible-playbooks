@@ -1,0 +1,9 @@
+- name: install latest qemu on all hosts
+  hosts: "*"
+  tasks:
+    - name: install qemu
+      apt:
+        name: qemu
+        state: present
+        update_cache: true
+      become: true

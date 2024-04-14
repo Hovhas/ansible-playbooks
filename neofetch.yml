@@ -1,0 +1,9 @@
+- name: install latest neofetch on all hosts
+  hosts: "*"
+  tasks:
+    - name: install neofetch
+      apt:
+        name: neofetch
+        state: present
+        update_cache: true
+      become: true

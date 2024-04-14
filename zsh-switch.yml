@@ -1,0 +1,9 @@
+- name: byt till zsh alla
+  hosts: "*"
+  tasks:
+    - name: byt till zsh
+      apt:
+        name: zsh
+        state: present
+        update_cache: true
+      become: 
